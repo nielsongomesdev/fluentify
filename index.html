@@ -23,13 +23,16 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#hero">Home</a>
+                            <a id="nav-home" class="nav-link" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a id="nav-about" class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a id="nav-contact" class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                            <button id="language-toggle" type="button" class="btn btn-outline-light btn-sm">PT</button>
                         </li>
                     </ul>
                 </div>
@@ -40,45 +43,47 @@
     <section id="hero" class="bg-primary text-white text-center py-5">
         <div class="container py-5">
             
-            <h1 class="display-4 fw-bold">Master a New Language Faster!</h1>
+            <h1 id="hero-title" class="display-4 fw-bold">Master a New Language Faster!</h1>
             
-            <p class="lead mb-4">
+            <p id="hero-text" class="lead mb-4">
                 Practical lessons focused on conversation so you can speak to the world. 
                 Open enrollments for English and Spanish classes.
             </p>
             
-            <a href="https://www.duolingo.com" target="_blank" class="btn btn-light btn-lg text-primary fw-bold">
+            <a id="hero-cta" href="https://www.duolingo.com" target="_blank" class="btn btn-light btn-lg text-primary fw-bold">
                 Start Practicing for Free
             </a>
             
         </div>
     </section>
 
-    <section id="about" class="py-5">
+   <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">About Our Course</h2>
+            <h2 id="about-title" class="text-center mb-5">About Our Course</h2>
             
-            <div class="row">
+            <div class="row justify-content-center text-center">
                 
-                <div class="col-md-6 mb-4">
-                    <h3 class="text-primary">Why Choose Fluentify?</h3>
-                    <p>Discover the benefits of learning with us:</p>
-                    <ul>
-                        <li>Native and highly experienced teachers.</li>
-                        <li>Flexible schedules tailored for busy people.</li>
-                        <li>Interactive, dynamic, and fun classes.</li>
-                        <li>Internationally recognized certificate upon completion.</li>
+                <div class="col-md-5 mb-4">
+                    <h3 id="about-why-title" class="text-primary">Why Choose Fluentify?</h3>
+                    <p id="about-why-text">Discover the benefits of learning with us:</p>
+                    
+                    <ul class="d-inline-block text-start">
+                        <li id="about-why-item-1">Native and highly experienced teachers.</li>
+                        <li id="about-why-item-2">Flexible schedules tailored for busy people.</li>
+                        <li id="about-why-item-3">Interactive, dynamic, and fun classes.</li>
+                        <li id="about-why-item-4">Internationally recognized certificate upon completion.</li>
                     </ul>
                 </div>
                 
-                <div class="col-md-6 mb-4">
-                    <h3 class="text-primary">How to Start?</h3>
-                    <p>Follow these simple steps to begin:</p>
-                    <ol>
-                        <li>Sign up through our platform.</li>
-                        <li>Take a quick, free placement test.</li>
-                        <li>Choose your preferred schedule and teacher.</li>
-                        <li>Start your journey to fluency!</li>
+                <div class="col-md-5 mb-4">
+                    <h3 id="about-start-title" class="text-primary">How to Start?</h3>
+                    <p id="about-start-text">Follow these simple steps to begin:</p>
+                    
+                    <ol class="d-inline-block text-start">
+                        <li id="about-start-item-1">Sign up through our platform.</li>
+                        <li id="about-start-item-2">Take a quick, free placement test.</li>
+                        <li id="about-start-item-3">Choose your preferred schedule and teacher.</li>
+                        <li id="about-start-item-4">Start your journey to fluency!</li>
                     </ol>
                 </div>
 
@@ -86,6 +91,56 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="contact" class="bg-light py-5">
+        <div class="container py-5">
+            <h2 id="contact-title" class="text-center mb-5">Contact Us</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    
+                    <form id="contact-form" novalidate>
+                        <div id="form-status" class="mb-3 small"></div>
+                        
+                        <div class="mb-3">
+                            <label id="name-label" for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                            <div id="name-error" class="invalid-feedback"></div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label id="email-label" for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <div id="email-error" class="invalid-feedback"></div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label id="message-label" for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?"></textarea>
+                            <div id="message-error" class="invalid-feedback"></div>
+                        </div>
+                        
+                        <button id="submit-button" type="submit" class="btn btn-primary w-100 fw-bold">Send Message</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            
+            <p id="footer-copy" class="mb-0">
+                &copy; 2026 Fluentify. All rights reserved.
+            </p>
+            
+            <p id="footer-author" class="small text-muted mt-1">
+                Designed and coded by <strong>Nielson Gomes</strong>.
+            </p>
+            
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
