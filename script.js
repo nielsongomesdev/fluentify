@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // 1. Variáveis dos campos e textos
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
@@ -36,11 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageLabel = document.getElementById("message-label");
     const submitButton = document.getElementById("submit-button");
     
-    // PEGANDO OS ELEMENTOS DO RODAPÉ AQUI!
     const footerCopy = document.getElementById("footer-copy");
     const footerAuthor = document.getElementById("footer-author");
 
-    // Validação de segurança para garantir que todos existem na tela
     if (!nameInput || !emailInput || !messageInput || !formStatus || !languageToggle || !navHome || !navAbout || !navContact || !heroTitle || !heroText || !heroCta || !aboutTitle || !aboutWhyTitle || !aboutWhyText || !aboutWhyItem1 || !aboutWhyItem2 || !aboutWhyItem3 || !aboutWhyItem4 || !aboutStartTitle || !aboutStartText || !aboutStartItem1 || !aboutStartItem2 || !aboutStartItem3 || !aboutStartItem4 || !contactTitle || !nameLabel || !emailLabel || !messageLabel || !submitButton || !footerCopy || !footerAuthor) {
         return;
     }
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // 2. Nosso Dicionário (Adicionei o rodapé no final das duas listas)
     const messages = {
         en: {
             documentTitle: "Fluentify - Language Course",
@@ -96,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewFields: "Please review the highlighted fields before sending.",
             validRedirecting: "Form is valid. Redirecting...",
             toggleAriaLabel: "Switch language to Portuguese",
-            // TRADUÇÕES DO RODAPÉ EM INGLÊS:
             footerCopy: "&copy; 2026 Fluentify. All rights reserved.",
             footerAuthor: "Designed and coded by <strong>Nielson Gomes</strong>."
         },
@@ -141,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewFields: "Revise os campos destacados antes de enviar.",
             validRedirecting: "Formulario valido. Redirecionando...",
             toggleAriaLabel: "Trocar idioma para ingles",
-            // TRADUÇÕES DO RODAPÉ EM PORTUGUÊS:
             footerCopy: "&copy; 2026 Fluentify. Todos os direitos reservados.",
             footerAuthor: "Projetado e codificado por <strong>Nielson Gomes</strong>."
         }
@@ -196,8 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         languageToggle.textContent = t("toggleButton");
         languageToggle.setAttribute("aria-label", t("toggleAriaLabel"));
         
-        // APLICANDO A TRADUÇÃO NO RODAPÉ:
-        // Usamos innerHTML no lugar de textContent porque temos as tags &copy; e <strong>
+       
         footerCopy.innerHTML = t("footerCopy");
         footerAuthor.innerHTML = t("footerAuthor");
     }
