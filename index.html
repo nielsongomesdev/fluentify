@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-mobile-fixed">
             <div class="container">
                 <a class="navbar-brand" href="#">Fluentify</a>
                 
@@ -31,13 +31,18 @@
                         <li class="nav-item">
                             <a id="nav-contact" class="nav-link" href="#contact">Contact</a>
                         </li>
-                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                            <button id="language-toggle" type="button" class="btn btn-outline-light btn-sm">PT</button>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
+        <div class="language-toggle-wrapper d-lg-none">
+            <button id="language-toggle" type="button" class="btn btn-outline-primary btn-sm">PT</button>
+        </div>
+        
+        <div class="language-toggle-wrapper d-none d-lg-block">
+            <button id="language-toggle-desktop" type="button" class="btn btn-outline-light btn-sm">PT</button>
+        </div>
     </header>
 
     <section id="hero" class="bg-primary text-white text-center py-5">

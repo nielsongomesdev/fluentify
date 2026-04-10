@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageInput = document.getElementById("message");
     const formStatus = document.getElementById("form-status");
     const languageToggle = document.getElementById("language-toggle");
+    const languageToggleDesktop = document.getElementById("language-toggle-desktop");
     const navHome = document.getElementById("nav-home");
     const navAbout = document.getElementById("nav-about");
     const navContact = document.getElementById("nav-contact");
@@ -189,6 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
         messageInput.placeholder = t("messagePlaceholder");
         languageToggle.textContent = t("toggleButton");
         languageToggle.setAttribute("aria-label", t("toggleAriaLabel"));
+        if (languageToggleDesktop) {
+            languageToggleDesktop.textContent = t("toggleButton");
+            languageToggleDesktop.setAttribute("aria-label", t("toggleAriaLabel"));
+        }
         
        
         footerCopy.innerHTML = t("footerCopy");
@@ -274,6 +279,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     languageToggle.addEventListener("click", toggleLanguage);
+    if (languageToggleDesktop) {
+        languageToggleDesktop.addEventListener("click", toggleLanguage);
+    }
     applyCurrentLanguageToUI();
 
     nameInput.addEventListener("input", function () {
